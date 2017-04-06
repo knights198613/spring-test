@@ -21,13 +21,13 @@ public class PersonTest {
 
     @Test
     public void testPerson() {
-        Person ps = context.getBean("person", Person.class);
+        Person ps = (Person) context.getBean("person", Person.class);
         System.out.println(ps.getSon().getAge());
     }
 
     @Test
     public void testSon() {
-        Son s2 = context.getBean("son2", Son.class);
+        Son s2 = (Son) context.getBean("son2", Son.class);
         System.out.println(s2.getAge());
     }
 
